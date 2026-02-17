@@ -28,10 +28,10 @@ This project implements low-level device drivers for a 4x4 Matrix Keypad and a 1
 * **Controller:** HD44780 via PCF8574 I2C Expander.
 * **I2C Instance:** I2C1
 * **Pins:**
-  * **SCL:** PB6  *(Verify if you used PB6 or PB8 in your .ioc file)*
-  * **SDA:** PB7  *(Verify if you used PB7 or PB9 in your .ioc file)*
-* **Address:** 0x27 (Default for most PCF8574 modules) or scanned automatically.
-
+  * **SCL:** PB8  
+  * **SDA:** PB9  
+* **Address:** 0x27
+  
 ## Features Implemented
 1.  **Keypad Scanning:** Custom driver scans rows/columns to detect button presses.
 2.  **Debouncing:** Software delay (`HAL_Delay`) prevents multiple characters from a single press.
