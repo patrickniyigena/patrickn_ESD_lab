@@ -41,4 +41,18 @@ This project implements low-level device drivers for a 4x4 Matrix Keypad and a 1
     * **Overflow Protection:** Prevents typing past the 16th character on a line.
     * **New Line (`#`):** Moves the cursor to the start of the second line.
     * **Clear Screen (`*`):** Clears the display and resets the cursor to (0,0).
-5.  **UART Debugging:** Key
+      
+5.  **UART Debugging:** Key presses are simultaneously sent to the Serial Console (115200 baud) for verification.
+
+## How to Run the Project
+1.  **Import:** Open STM32CubeIDE and go to `File > Import > General > Existing Projects into Workspace`. Select this project folder.
+2.  **Build:** Click the "Hammer" icon to build the project. Ensure there are no errors.
+3.  **Connect:** Plug in the Nucleo-F103RB board via USB.
+4.  **Run:** Click the "Debug" (Bug icon) or "Run" (Play icon) button.
+    * *Note:* If the board does not connect, hold the **Black Reset Button** on the board, click Debug, and release the button once "Waiting for debugger..." appears.
+
+## File Structure
+* `Core/Src/main.c`: Main application loop and keypad scanning logic.
+* `Core/Inc/HD44780.h`: Header file for the LCD driver.
+* `Core/Src/HD44780.c`: Source code for LCD I2C commands.
+* `Drivers/`: Standard STM32 HAL libraries.
